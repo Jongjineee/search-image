@@ -20,12 +20,12 @@ class ShutterstockService
   private
 
   def build_url
-    "https://#{@api_client}:#{@api_secret}@#{@api_base_url}#{@search_word}&page=#{@page}&per_page=50"
+    "https://#{@api_client}:#{@api_secret}@#{@api_base_url}#{@search_word}&page=#{@page}&per_page=100"
   end
 
   def create_page_count
     total_images = JSON.parse(@images)["total_count"]
-    pages_count = total_images/50
+    pages_count = total_images/100
     return pages_count
   end
 
