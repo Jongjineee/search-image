@@ -1,3 +1,5 @@
+require 'uri'
+
 class IntrosController < ApplicationController
   def index
     flash[:error] = ''

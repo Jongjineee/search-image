@@ -20,7 +20,7 @@ class ShutterstockService
   private
 
   def build_url
-    "https://#{@api_client}:#{@api_secret}@#{@api_base_url}#{@search_word}&page=#{@page}&per_page=100"
+    URI.escape("https://#{@api_client}:#{@api_secret}@#{@api_base_url}#{@search_word}&page=#{@page}&per_page=100&language=ko")
   end
 
   def create_page_count
