@@ -2,8 +2,8 @@
   <div class="<%= key %> alert alert-danger" role="alert"><%= value %></div>
 <% end %>
 
-<div class="content">
-  <div class="header">
+<div class="container">
+  <div class="header text-center">
     <h1 class="header-title">
       Search Images
     </h1>
@@ -18,35 +18,17 @@
     </form>
   </div>
 
-  <div class="body">
+  <div class="raw text-lg-left text-center">
     <%= render partial: "images", collection: @images, as: :image %>
   </div>
 
   <div class="page">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-
-        <% if @pages %>
-          <% (1..5).each do |page| %>
-            <li class="page-content">
-              <%= link_to root_path(search_word: params[:search_word], page: page), class: "page-link" do %>
-                <%= page %>
-              <% end %>
-            </li>
-          <% end %>
-        <% end %>
-
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <% if @paginatable_array %>
+      <%= paginate @paginatable_array %>
+    <% end %>
   </div>
 </div>
+
+<script>
+  
+</script>

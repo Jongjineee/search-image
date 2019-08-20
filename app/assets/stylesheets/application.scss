@@ -1,1 +1,60 @@
 @import "bootstrap";
+
+.pagination {
+  justify-content: center !important;
+  border: none;
+  border: 0 !important;
+
+  a {
+    border: 0 !important;
+  }
+
+  .gap {
+    border: 0 !important;
+  }
+}
+
+.current {
+    color: white;
+    background-color: rgb(57, 115, 221) !important;
+    border: solid 1px rgb(57, 115, 221) !important;
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #DDD;
+  border-left-width: 0;
+}
+
+.pagination {
+  border-left: 1px solid #ddd;
+  .first{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .prev {
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .page{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .next{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .last{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+}
