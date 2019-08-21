@@ -14,7 +14,7 @@
     </form>
   </div>
 
-  <% if @images.blank? %>
+  <% if params[:search_word] && @images.blank? %>
     <div class="blank-text text-center">검색결과 없음</div>
   <% end %>
 
